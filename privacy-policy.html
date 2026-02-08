@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>不干了 / Not Today - 隐私政策 / Privacy Policy</title>
+  <meta name="description" content="《不干了 / Not Today》隐私政策（中英双语，可切换）。" />
+  <style>
+    :root{
+      --bg:#fbf7f2;
+      --card:#ffffff;
+      --text:#2b2b2b;
+      --muted:#6b6b6b;
+      --line:#e9e2d9;
+      --accent:#d94c44;
+      --link:#1a66cc;
+      --shadow: 0 10px 30px rgba(0,0,0,.06);
+      --radius: 18px;
+      --max: 920px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.75;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 56px;}
+    header{
+      background: linear-gradient(180deg, rgba(217,76,68,.10), rgba(217,76,68,0));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px 18px 14px;
+      box-shadow:var(--shadow);
+    }
+    .toprow{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    h1{font-size:20px; margin:0; letter-spacing:.3px;}
+    .sub{color:var(--muted); font-size:13px; margin-top:6px;}
+    .langbar{
+      display:flex; gap:8px; align-items:center; flex-wrap:wrap;
+      margin-top:6px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.72);
+      font-size:12px; color:var(--muted);
+      cursor:pointer; user-select:none;
+    }
+    .pill[aria-pressed="true"]{
+      border-color: rgba(217,76,68,.45);
+      background: rgba(217,76,68,.10);
+      color: var(--text);
+    }
+    .meta{
+      margin-top:10px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      padding-top:12px;
+      border-top:1px solid var(--line);
+    }
+    .meta .item{
+      background: rgba(0,0,0,.02);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:10px 12px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .meta .item b{color:var(--text)}
+    .callout{
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(26,102,204,.06);
+      font-size:13px;
+    }
+
+    main{
+      margin-top:16px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px 20px;
+      box-shadow:var(--shadow);
+    }
+    .toc{
+      border:1px dashed var(--line);
+      background: rgba(217,76,68,.04);
+      padding:14px 14px;
+      border-radius:14px;
+      margin: 10px 0 18px;
+    }
+    .toc .title{font-size:13px; color:var(--muted); margin:0 0 8px;}
+    .toc ul{margin:0; padding-left:18px; columns:2; column-gap:22px;}
+    .toc li{break-inside:avoid; margin:6px 0;}
+    h2{
+      margin:26px 0 10px;
+      font-size:18px;
+      border-left:4px solid var(--accent);
+      padding-left:10px;
+    }
+    p{margin:10px 0}
+    ol,ul{margin:10px 0 10px 22px}
+    .toplink{display:inline-block; margin-top:8px; font-size:12px; color:var(--muted);}
+    footer{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+      padding:12px 0 0;
+    }
+    .lang{display:none;}
+    .lang.active{display:block;}
+
+    .smallmuted{font-size:12px; color:var(--muted);}
+    hr.sep{border:none;border-top:1px solid var(--line); margin:20px 0;}
+
+    .badge{
+      display:inline-block;
+      padding:2px 8px;
+      font-size:12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.02);
+      color: var(--muted);
+      margin-left:6px;
+      vertical-align:middle;
+      white-space:nowrap;
+    }
+
+    @media (max-width:680px){
+      .toc ul{columns:1}
+      .meta{grid-template-columns:1fr}
+    }
+    @media print{
+      body{background:#fff}
+      header, main{box-shadow:none}
+      .toc{border-style:solid}
+      a{color:#000; text-decoration:none}
+      .langbar{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap" id="top">
+
+    <header>
+      <div class="toprow">
+        <div>
+          <h1>《不干了 / Not Today》隐私政策（中英双语）</h1>
+          <div class="sub">Privacy Policy (Bilingual, Toggle on Page)</div>
+        </div>
+
+        <div>
+          <div class="langbar" role="group" aria-label="Language switcher">
+            <button class="pill" id="btn-zh" type="button" aria-pressed="true">中文</button>
+            <button class="pill" id="btn-en" type="button" aria-pressed="false">English</button>
+          </div>
+          <div class="smallmuted">提示：可在页面顶部切换语言；打印时仅保留当前语言。</div>
+        </div>
+      </div>
+
+      <div class="meta">
+        <div class="item"><b>更新日期 / Last Updated：</b>2026-02-08</div>
+        <div class="item"><b>生效日期 / Effective Date：</b>2026-02-01</div>
+      </div>
+
+      <div class="callout" id="notice-zh">
+        提示：本政策说明我们如何收集、使用、存储与保护您的信息。若您不同意本政策内容，请停止使用本应用。
+      </div>
+      <div class="callout" id="notice-en" style="display:none;">
+        Notice: This Policy explains how we collect, use, store, and protect your information. If you do not agree, please stop using the App.
+      </div>
+    </header>
+
+    <main>
+      <!-- =========================
+           中文版
+      ========================== -->
+      <article class="lang active" id="lang-zh" lang="zh-CN">
+        <section class="toc">
+          <p class="title">目录</p>
+          <ul>
+            <li><a href="#zh-s1">一、我们是谁</a></li>
+            <li><a href="#zh-s2">二、我们收集哪些信息</a></li>
+            <li><a href="#zh-s3">三、我们如何使用信息</a></li>
+            <li><a href="#zh-s4">四、行业 Top5 统计说明</a> <span class="badge">轻联网</span></li>
+            <li><a href="#zh-s5">五、我们如何共享信息</a></li>
+            <li><a href="#zh-s6">六、我们如何存储与保护信息</a></li>
+            <li><a href="#zh-s7">七、您的权利</a></li>
+            <li><a href="#zh-s8">八、未成年人保护</a></li>
+            <li><a href="#zh-s9">九、第三方服务</a></li>
+            <li><a href="#zh-s10">十、本政策如何更新</a></li>
+            <li><a href="#zh-s11">十一、联系我们</a></li>
+          </ul>
+        </section>
+
+        <p>欢迎您使用「<b>不干了</b>」（英文名：<b>Not Today</b>，以下简称“本应用”）。我们非常重视您的个人信息与隐私保护。</p>
+        <p>本《隐私政策》（以下简称“本政策”）将帮助您了解我们如何处理与您相关的信息。<b>请您在使用前仔细阅读并充分理解本政策。</b></p>
+
+        <h2 id="zh-s1">一、我们是谁</h2>
+        <ol>
+          <li><b>运营方/开发者</b>：本应用的合法权利人及实际运营主体（以下统称“我们”）。</li>
+          <li><b>适用范围</b>：本政策适用于您通过本应用使用的相关功能与服务。</li>
+        </ol>
+        <a class="toplink" href="#top">↑ 返回顶部</a>
+
+        <h2 id="zh-s2">二、我们收集哪些信息</h2>
+        <p>为实现本应用的基础功能与轻量统计，我们可能会收集如下信息（以实际产品功能为准）：</p>
+        <ol>
+          <li><b>您主动提供的信息</b>：
+            <ul>
+              <li>您选择的城市（用于展示/筛选/统计等目的）；</li>
+              <li>您选择的行业（用于聚合统计“最想辞职行业 Top5”等）。</li>
+            </ul>
+          </li>
+          <li><b>您在应用内产生的使用数据</b>：
+            <ul>
+              <li>签到/选择记录、连续天数、报告生成相关数据（可能为本地或云端存储，取决于版本实现）；</li>
+              <li>基础的功能使用日志（用于排查故障与优化体验）。</li>
+            </ul>
+          </li>
+          <li><b>设备与网络信息（必要范围）</b>：
+            <ul>
+              <li>设备型号、系统版本、语言设置、应用版本号；</li>
+              <li>网络类型、粗略的访问时间戳（用于安全与稳定性）。</li>
+            </ul>
+          </li>
+          <li><b>我们不主动收集的敏感信息</b>：
+            <ul>
+              <li>我们不要求您填写身份证号、精确定位、通讯录、相册、健康/医疗信息等；</li>
+              <li>若未来某些功能确需敏感权限，我们将以弹窗/系统授权方式单独征得您的明确同意。</li>
+            </ul>
+          </li>
+        </ol>
+        <a class="toplink" href="#top">↑ 返回顶部</a>
+
+        <h2 id="zh-s3">三、我们如何使用信息</h2>
+        <ol>
+          <li>提供并维护核心功能：记录、展示您的签到/选择、连续天数与报告等。</li>
+          <li>产品改进与故障排查：用于分析崩溃、卡顿、错误，提升稳定性与体验。</li>
+          <li>安全保障：用于识别异常访问、防止滥用与攻击。</li>
+          <li>合规需要：根据适用法律法规要求保存必要记录或配合监管。</li>
+        </ol>
+        <p class="smallmuted">我们不会将您的个人信息用于与本应用目的无关的用途，除非取得您的额外同意或法律法规允许/要求。</p>
+        <a class="toplink" href="#top">↑ 返回顶部</a>
+
+        <h2 id="zh-s4">四、行业 Top5 统计说明（轻联网）</h2>
+        <p>本应用为“轻联网”产品：当您选择行业后，我们可能会将“行业选项”以统计口径汇总，用于展示例如“最想辞职行业 Top5”等聚合榜单。</p>
+        <ol>
+          <li><b>统计口径</b>：我们仅用于聚合统计与排序展示，不用于识别您的真实身份。</li>
+          <li><b>去标识化/汇总展示</b>：我们尽量以汇总后的数量/比例呈现，而非展示单个用户的选择记录。</li>
+          <li><b>最小化原则</b>：仅上传实现统计所必需的数据字段，避免收集与统计无关的信息。</li>
+        </ol>
+        <a class="toplink" href="#top">↑ 返回顶部</a>
+
+        <h2 id="zh-s5">五、我们如何共享信息</h2>
+        <p>我们非常谨慎对待信息共享。除以下情形外，我们不会对外共享您的个人信息：</p>
+        <ol>
+          <li><b>经您同意</b>：在获得您明确授权/同意后共享。</li>
+          <li><b>为实现服务所必需</b>：例如使用必要的云服务/日志服务用于网站或应用的稳定运行（仅限最小必要）。</li>
+          <li><b>法律法规要求</b>：司法机关或监管部门依法要求披露时。</li>
+        </ol>
+        <p class="smallmuted">如我们使用第三方 SDK/服务（例如托管、统计、邮件支持等），会尽量选择合规方案并控制共享范围。</p>
+        <a class="toplink" href="#top">↑ 返回顶部</a>
+
+        <h2 id="zh-s6">六、我们如何存储与保护信息</h2>
+        <ol>
+          <li><b>存储地点</b>：可能在您设备本地与/或我们的服务器上（取决于版本实现与部署地区）。</li>
+          <li><b>存储期限</b>：在实现功能所必需的最短期限内保存；超过期限将删除或匿名化处理（法律法规另有要求的除外）。</li>
+          <li><b>安全措施</b>：我们采取合理的安全措施（访问控制、传输保护、权限最小化等）保护信息，防止泄露、篡改或丢失。</li>
+          <li><b>风险提示</b>：互联网环境并非绝对安全。如发生安全事件，我们将按法律法规要求采取补救措施并在必要时向您告知。</li>
+        </ol>
+        <a class="toplink" href="#top">↑ 返回顶部</a>
+
+        <h2 id="zh-s7">七、您的权利</h2>
+        <p>在适用法律法规允许范围内，您对个人信息享有以下权利：</p>
+        <ol>
+          <li>访问与更正：您可在应用内查看并更正可编辑信息（如行业/城市等）。</li>
+          <li>删除：您可请求删除与您相关的个人信息（在不影响合规义务的前提下）。</li>
+          <li>撤回同意：您可通过停止使用、关闭权限等方式撤回授权；撤回不影响撤回前处理的合法性。</li>
+          <li>账号与数据迁移/导出：若未来支持，我们将提供相应能力或支持通道。</li>
+        </ol>
+        <p>您可通过“联系我们”中的邮箱与我们沟通您的请求。</p>
+        <a class="toplink" href="#top">↑ 返回顶部</a>
+
+        <h2 id="zh-s8">八、未成年人保护</h2>
+        <ol>
+          <li>本应用面向成年人使用。若您未满 18 周岁，请在监护人指导下阅读并使用。</li>
+          <li>如我们发现可能收集了未成年人的个人信息，将在核实后尽快删除或采取相应措施。</li>
+        </ol>
+        <a class="toplink" href="#top">↑ 返回顶部</a>
+
+        <h2 id="zh-s9">九、第三方服务</h2>
+        <p>本应用可能包含第三方服务链接或依赖第三方基础设施（例如托管、CDN、应用商店支付与分发等）。这些第三方将依据其自身政策处理相关信息。</p>
+      
+        <a class="toplink" href="#top">↑ 返回顶部</a>
+
+        <h2 id="zh-s10">十、本政策如何更新</h2>
+        <ol>
+          <li>我们可能根据产品功能与合规要求更新本政策。</li>
+          <li>如更新对您权利义务有重大影响，我们将以页面公告或其他合理方式提示。</li>
+          <li>若您继续使用本应用，即表示您同意更新后的政策。</li>
+        </ol>
+        <a class="toplink" href="#top">↑ 返回顶部</a>
+
+        <h2 id="zh-s11">十一、联系我们</h2>
+        <p>如您对本政策有疑问、意见或投诉建议，可通过以下方式联系我们：</p>
+        <ul>
+          <li>邮箱：<a href="mailto:support.not.today@gmail.com">support.not.today@gmail.com</a></li>
+        </ul>
+
+        <hr class="sep" />
+        <p class="smallmuted">© 2026 不干了 / Not Today. All rights reserved.</p>
+      </article>
+
+      <!-- =========================
+           English Version
+      ========================== -->
+      <article class="lang" id="lang-en" lang="en">
+        <section class="toc">
+          <p class="title">Table of Contents</p>
+          <ul>
+            <li><a href="#en-s1">1. Who We Are</a></li>
+            <li><a href="#en-s2">2. Information We Collect</a></li>
+            <li><a href="#en-s3">3. How We Use Information</a></li>
+            <li><a href="#en-s4">4. Top 5 Industry Stats</a> <span class="badge">Light Online</span></li>
+            <li><a href="#en-s5">5. How We Share Information</a></li>
+            <li><a href="#en-s6">6. Storage & Security</a></li>
+            <li><a href="#en-s7">7. Your Rights</a></li>
+            <li><a href="#en-s8">8. Children’s Privacy</a></li>
+            <li><a href="#en-s9">9. Third-Party Services</a></li>
+            <li><a href="#en-s10">10. Updates to This Policy</a></li>
+            <li><a href="#en-s11">11. Contact Us</a></li>
+          </ul>
+        </section>
+
+        <p>Welcome to <b>Not Today</b> (Chinese name: <b>不干了</b>, the “App”). We take your privacy seriously.</p>
+        <p>This <b>Privacy Policy</b> explains how we collect, use, store, and protect information related to you. <b>Please read it carefully.</b></p>
+
+        <h2 id="en-s1">1. Who We Are</h2>
+        <ol>
+          <li><b>Developer/Operator (“we”, “us”)</b>: the lawful rights holder and operator of the App.</li>
+          <li><b>Scope</b>: this Policy applies to your use of the App and related services.</li>
+        </ol>
+        <a class="toplink" href="#top">↑ Back to top</a>
+
+        <h2 id="en-s2">2. Information We Collect</h2>
+        <p>To provide core features and lightweight aggregated stats, we may collect the following (depending on the actual implementation):</p>
+        <ol>
+          <li><b>Information you provide</b>:
+            <ul>
+              <li>City selection (for display/filter/stats purposes);</li>
+              <li>Industry selection (for aggregated “Top 5 most likely-to-quit industries” stats).</li>
+            </ul>
+          </li>
+          <li><b>In-app generated data</b>:
+            <ul>
+              <li>Check-in/choice logs, streaks, report-related data (stored locally and/or on servers depending on version);</li>
+              <li>Basic feature usage logs for debugging and improving stability.</li>
+            </ul>
+          </li>
+          <li><b>Device & network info (as necessary)</b>:
+            <ul>
+              <li>Device model, OS version, language, app version;</li>
+              <li>Network type and coarse timestamps for security and reliability.</li>
+            </ul>
+          </li>
+          <li><b>Sensitive information</b>:
+            <ul>
+              <li>We do not require national ID, precise location, contacts, photos, health/medical data, etc.;</li>
+              <li>If future features require sensitive permissions, we will ask for your explicit consent via clear prompts.</li>
+            </ul>
+          </li>
+        </ol>
+        <a class="toplink" href="#top">↑ Back to top</a>
+
+        <h2 id="en-s3">3. How We Use Information</h2>
+        <ol>
+          <li>Provide and maintain core features: logs, streaks, history, and reports.</li>
+          <li>Improve product quality and troubleshoot: analyze crashes, errors, and performance.</li>
+          <li>Security: detect abuse, protect against attacks.</li>
+          <li>Compliance: retain necessary records or cooperate with lawful requests when required.</li>
+        </ol>
+        <p class="smallmuted">We do not use your information for unrelated purposes unless we obtain additional consent or are permitted/required by law.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+
+        <h2 id="en-s4">4. Top 5 Industry Stats (Light Online)</h2>
+        <p>The App is a “light online” product: when you select an industry, we may aggregate that selection for leaderboard-style stats such as “Top 5 industries most likely to quit”.</p>
+        <ol>
+          <li><b>Statistical purpose only</b>: used for aggregated analytics and display, not for identifying you.</li>
+          <li><b>Aggregated/de-identified</b>: results are presented as aggregated counts/ratios where feasible.</li>
+          <li><b>Data minimization</b>: only the minimum fields needed to compute the stats are processed.</li>
+        </ol>
+        <a class="toplink" href="#top">↑ Back to top</a>
+
+        <h2 id="en-s5">5. How We Share Information</h2>
+        <p>We share personal information only in limited cases:</p>
+        <ol>
+          <li><b>With your consent</b>: when you explicitly authorize it.</li>
+          <li><b>To provide services</b>: necessary infrastructure providers (hosting/logs) with minimal scope.</li>
+          <li><b>Legal requirements</b>: when required by law or lawful authority.</li>
+        </ol>
+        <a class="toplink" href="#top">↑ Back to top</a>
+
+        <h2 id="en-s6">6. Storage & Security</h2>
+        <ol>
+          <li><b>Where we store data</b>: on your device and/or our servers depending on version and deployment region.</li>
+          <li><b>Retention</b>: kept for the shortest time necessary; then deleted or anonymized unless otherwise required by law.</li>
+          <li><b>Security</b>: we use reasonable safeguards (access controls, transmission protections, least privilege).</li>
+          <li><b>Risk notice</b>: no system is 100% secure; if an incident occurs, we will take remedial measures and notify you where required.</li>
+        </ol>
+        <a class="toplink" href="#top">↑ Back to top</a>
+
+        <h2 id="en-s7">7. Your Rights</h2>
+        <ol>
+          <li>Access & correction (where applicable).</li>
+          <li>Deletion requests (subject to compliance obligations).</li>
+          <li>Withdraw consent by stopping use or revoking permissions (lawful processing before withdrawal remains valid).</li>
+          <li>Data export/portability if supported in future versions.</li>
+        </ol>
+        <p>You may contact us via the email below to submit requests.</p>
+        <a class="toplink" href="#top">↑ Back to top</a>
+
+        <h2 id="en-s8">8. Children’s Privacy</h2>
+        <ol>
+          <li>The App is intended for adults. If you are under 18, please use under guardian guidance.</li>
+          <li>If we learn that we have collected children’s data, we will delete it or take appropriate measures.</li>
+        </ol>
+        <a class="toplink" href="#top">↑ Back to top</a>
+
+        <h2 id="en-s9">9. Third-Party Services</h2>
+        <p>The App may rely on third-party infrastructure (e.g., hosting, CDN, app store distribution/payment). Those parties process data under their own policies.</p>
+        
+        <a class="toplink" href="#top">↑ Back to top</a>
+
+        <h2 id="en-s10">10. Updates to This Policy</h2>
+        <ol>
+          <li>We may update this Policy as features or compliance needs evolve.</li>
+          <li>Material changes will be notified via reasonable means when feasible.</li>
+          <li>Continued use means you accept the updated Policy.</li>
+        </ol>
+        <a class="toplink" href="#top">↑ Back to top</a>
+
+        <h2 id="en-s11">11. Contact Us</h2>
+        <p>If you have questions or complaints, contact:</p>
+        <ul>
+          <li>Email: <a href="mailto:support.not.today@gmail.com">support.not.today@gmail.com</a></li>
+        </ul>
+
+        <hr class="sep" />
+        <p class="smallmuted">© 2026 Not Today / 不干了. All rights reserved.</p>
+      </article>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const btnZh = document.getElementById('btn-zh');
+      const btnEn = document.getElementById('btn-en');
+      const zh = document.getElementById('lang-zh');
+      const en = document.getElementById('lang-en');
+      const noticeZh = document.getElementById('notice-zh');
+      const noticeEn = document.getElementById('notice-en');
+
+      function setLang(lang) {
+        const isZh = lang === 'zh';
+
+        zh.classList.toggle('active', isZh);
+        en.classList.toggle('active', !isZh);
+
+        btnZh.setAttribute('aria-pressed', isZh ? 'true' : 'false');
+        btnEn.setAttribute('aria-pressed', !isZh ? 'true' : 'false');
+
+        noticeZh.style.display = isZh ? 'block' : 'none';
+        noticeEn.style.display = isZh ? 'none' : 'block';
+
+        document.documentElement.lang = isZh ? 'zh-CN' : 'en';
+
+        const hash = location.hash || '';
+        if (hash) {
+          const target = document.querySelector(hash);
+          if (!target) return;
+
+          if (isZh && hash.startsWith('#en-')) {
+            const mapped = hash.replace('#en-', '#zh-');
+            if (document.querySelector(mapped)) location.hash = mapped;
+          }
+          if (!isZh && hash.startsWith('#zh-')) {
+            const mapped = hash.replace('#zh-', '#en-');
+            if (document.querySelector(mapped)) location.hash = mapped;
+          }
+        }
+      }
+
+      const saved = localStorage.getItem('not_today_privacy_lang');
+      const preferEn = saved ? (saved === 'en') : (navigator.language || '').toLowerCase().startsWith('en');
+
+      setLang(preferEn ? 'en' : 'zh');
+
+      btnZh.addEventListener('click', function () {
+        localStorage.setItem('not_today_privacy_lang', 'zh');
+        setLang('zh');
+      });
+
+      btnEn.addEventListener('click', function () {
+        localStorage.setItem('not_today_privacy_lang', 'en');
+        setLang('en');
+      });
+    })();
+  </script>
+</body>
+</html>
